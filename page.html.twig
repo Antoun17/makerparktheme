@@ -13,6 +13,12 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
+    {% if page.mainsidebar %}
+        <aside class="sidebar" role="complementary">
+          {{ page.mainsidebar }}
+        </aside>
+      {% endif %}
+
 
   </main>
 
