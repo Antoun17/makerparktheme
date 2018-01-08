@@ -3,14 +3,6 @@ header {
   height: inherit;
 }
 
-.sidebar{
-  width: 100px;
-  height: 1000px;
-  background:#000
-  float: right;
-}
-
-
 html{
     font-size: 100%;
 }
