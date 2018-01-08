@@ -14,27 +14,30 @@
     </div>{# /.layout-content #}
 
     {% if page.sidebar %}
+    <svg>
         <aside class="layout-sidebar-first" role="complementary">
           {{ page.sidebar }}
-          <svg>
+
             <rect x="0" y="0" width="300" height="500" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0) z-index"/>
 
 
-            <h1>Test Text2</h1>
-
-            <style>
-            .layout-sidebar-first{
-              width: 300px;
-              height: 500px;
-              padding-right: 15px;
 
 
-            }
-            </style>
-          </svg>
+          <h1>Test Text2</h1>
+
+          <style>
+          .layout-sidebar-first{
+            width: 300px;
+            height: 500px;
+            padding-right: 15px;
+
+
+          }
+          </style>
+
         </aside>
       {% endif %}
-
+  </svg>
 
   </main>
 
