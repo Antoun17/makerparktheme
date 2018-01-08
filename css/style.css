@@ -1,3 +1,15 @@
+header {
+  width: inherit;
+  height: inherit;
+}
+
+mainsidebar{
+  width: 100px;
+  height: 1000px;
+  background:#FFFFFF
+}
+
+
 html{
     font-size: 100%;
 }
