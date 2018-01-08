@@ -6,7 +6,7 @@ header {
 .mainsidebar{
   width: 100px;
   height: 1000px;
-  background:#FFFFFF
+  background:#000000
 }
 
 
@@ -15,7 +15,7 @@ html{
 }
 body{
     -webkit-font-smoothing: antialiased;
-    background:#000
+    background:#FFFFFF
 }
 *{
     box-sizing:border-box;
