@@ -10,5 +10,5 @@ libraries:
 regions:
   content: 'Main Content'
   footer: 'Footer'
-  mainsidebar: 'Sidebar'
+  sidebar: 'Sidebar'
   header: 'Header'
