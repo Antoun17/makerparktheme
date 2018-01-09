@@ -7,5 +7,12 @@
 #  js:
 #    js/main.js: {}
 
+node_modules:
+  bootstrap:
+    dist:
+      css:
+        css/bootstrap.css: {}
+
+
   dependencies:
     - core/jquery
