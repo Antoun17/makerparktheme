@@ -13,6 +13,12 @@ node_modules:
       css:
         css/bootstrap.css: {}
 
+node_modules:
+  bootstrap:
+    dist:
+      js:
+        js/bootstrap.js: {}
+
 
   dependencies:
     - core/jquery
