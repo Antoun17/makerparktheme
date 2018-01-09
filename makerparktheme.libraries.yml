@@ -1,11 +1,10 @@
-global-css:
-  css:
-    theme:
-      css/style.css: {}
-
-global-js:
-  js:
-    js/main.js: {}
+node_modules:
+  bootstrap:
+    dist:
+      css/bootstrap.css: {}
+      js/bootstrap.js: {}
+js:
+  js/jquery-3.2.1.min.js: {}
 
   dependencies:
     - core/jquery
