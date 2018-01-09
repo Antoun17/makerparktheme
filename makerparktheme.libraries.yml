@@ -1,11 +1,10 @@
 global-css:
   css:
     theme:
-      css/style.css: {}
+      node_modules/bootstrap/dist/css/bootstrap.css: {}
 
-global-js:
-  js:
-    js/main.js: {}
+js:
+  js/main.js: {}
 
   dependencies:
     - core/jquery
