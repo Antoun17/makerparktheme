@@ -1,17 +1,6 @@
-node_modules:
-  bootstrap:
-    dist:
-      css:
-        css/bootstrap.css: {}
 
-node_modules:
-  bootstrap:
-    dist:
-      js:
-        js/bootstrap.js: {}
 js:
   js/main.js: {}
-  js/jquery-3.2.1.min.js: {}
-
+  
   dependencies:
     - core/jquery
