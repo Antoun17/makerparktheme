@@ -3,7 +3,7 @@ description: Maker Park Radio Theme
 type: theme
 core: 8.x
 libraries:
-  
+  - makerparktheme/node_modules
 
 regions:
   content: 'Main Content'
