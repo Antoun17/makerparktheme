@@ -9,17 +9,10 @@
 
 
 bootstrap:
-  dist:
-    css:
-      css/bootstrap.css: {}
+  version: 4.0
+    css/bootstrap.css: {}
 
 
-bootstrap:
-  dist:
-    js:
-      js/bootstrap.js: {}
-
-makerparktheme:
   js:
     js/jquery-3.2.1.min.js: {}
 
