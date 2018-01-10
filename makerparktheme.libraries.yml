@@ -7,17 +7,17 @@
 #  js:
 #    js/main.js: {}
 
-node_modules:
-  bootstrap:
-    dist:
-      css:
-        css/bootstrap.css: {}
 
-node_modules:
-  bootstrap:
-    dist:
-      js:
-        js/bootstrap.js: {}
+bootstrap:
+  dist:
+    css:
+      css/bootstrap.css: {}
+
+
+bootstrap:
+  dist:
+    js:
+      js/bootstrap.js: {}
 
 makerparktheme:
   js:
@@ -25,3 +25,4 @@ makerparktheme:
 
 
   dependencies:
+    - core/jquery
