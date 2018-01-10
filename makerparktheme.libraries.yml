@@ -15,6 +15,7 @@ bootstrap:
 
   js:
     js/jquery-3.2.1.min.js: {}
+    js/popper.js: {}
 
 
   dependencies:
