@@ -9,7 +9,7 @@
 libraries-override:
   css:
     theme:
-      core/themes/stable/css/system/components/align.module.css: false
+      core/themes/stable/css/system/components/align.module.css?p2eeed: false
 bootstrap:
   css:
     theme:
