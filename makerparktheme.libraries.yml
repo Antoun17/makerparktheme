@@ -20,10 +20,6 @@ popper:
   js:
     js/popper.js: {}
 
-rocketChat:
-  version: 2.9.x
-
-
 
   dependencies:
     - core/jquery
