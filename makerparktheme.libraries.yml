@@ -6,8 +6,6 @@
 #global-js:
 #  js:
 #    js/main.js: {}
-stylesheets-remove:
-  - core/themes/stable/css/views/views.module.css:
 
 bootstrap:
   css:
