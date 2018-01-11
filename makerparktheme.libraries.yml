@@ -6,7 +6,8 @@
 #global-js:
 #  js:
 #    js/main.js: {}
-lib
+#libraries-override:
+
 bootstrap:
   css:
     theme:
