@@ -11,3 +11,6 @@ regions:
   footer: 'Footer'
   sidebar: 'Sidebar'
   header: 'Header'
+
+libraries:
+  - 'makerparktheme/node_modules/bootstrap'

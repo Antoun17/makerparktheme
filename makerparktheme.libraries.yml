@@ -7,15 +7,22 @@
 #  js:
 #    js/main.js: {}
 
-
 bootstrap:
-  version: 4.0
-    css/bootstrap.css: {}
+  css:
+    theme:
+      css/bootstrap.css: {}
 
 
+
+
+popper:
+  version: 1.x
   js:
-    js/jquery-3.2.1.min.js: {}
     js/popper.js: {}
+
+rocketChat:
+  version: 2.9.x
+
 
 
   dependencies:
