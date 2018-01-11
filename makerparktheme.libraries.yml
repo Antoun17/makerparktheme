@@ -6,8 +6,8 @@
 #global-js:
 #  js:
 #    js/main.js: {}
-#libraries-override:
-  #core/system/components: makerparktheme/node_modules/bootstrap/
+libraries-override:
+  core/system/components/views.module.css: makerparktheme/node_modules/bootstrap/
 
 bootstrap:
   css:
