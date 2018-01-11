@@ -6,7 +6,7 @@
 #global-js:
 #  js:
 #    js/main.js: {}
-
+lib
 bootstrap:
   css:
     theme:
