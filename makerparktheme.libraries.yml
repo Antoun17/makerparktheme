@@ -10,9 +10,11 @@
 bootstrap:
   css:
     theme:
-      css/bootstrap.css: {}
+      node_modules/bootstrap/dist/css/bootstrap.css: {}
 
-
+bootstrap:
+  js:
+    bootstrap/js/dist/dropdown.js: {}
 
 
 popper:
