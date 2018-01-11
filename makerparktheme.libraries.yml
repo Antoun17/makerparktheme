@@ -6,8 +6,10 @@
 #global-js:
 #  js:
 #    js/main.js: {}
-#libraries-override:
-
+libraries-override:
+  css:
+    theme:
+      core/themes/stable/css/system/components/align.module.css: false
 bootstrap:
   css:
     theme:
