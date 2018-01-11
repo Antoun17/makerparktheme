@@ -7,7 +7,8 @@
 #  js:
 #    js/main.js: {}
 libraries-override:
-  core/system/components/views.module.css: makerparktheme/node_modules/bootstrap/
+  core/system/components/views.module.css:
+    makerparktheme/node_modules/bootstrap/bootstrap.grid.css:
 
 bootstrap:
   css:
