@@ -9,6 +9,8 @@ bootstrap:
   css:
     theme:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
+  js:
+    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
 
 
   dependencies:
