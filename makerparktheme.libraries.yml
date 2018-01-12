@@ -2,7 +2,7 @@
 popper:
   version: 1.x
   js:
-    '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/popper.min.js': {external: true}
+    node_modules/popperjs/dist/umd/popper.js: {}
 
 bootstrap:
   version: 4.0.x
