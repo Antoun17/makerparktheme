@@ -1,5 +1,8 @@
 
-
+bootstrap:
+  version: 4.0.x
+    css:
+      node_modules/bootstrap/dist/css/bootstrap.css: {}
 
 bootstrap:
   js:
