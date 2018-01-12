@@ -1,21 +1,23 @@
 
+popper:
+  version: 1.x
+  js:
+    node_modules/popperjs/dist/popper.js: {}
+
 bootstrap:
   version: 4.0.x
   css:
     theme:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
   js:
-    node_modules/bootstrap/dist/js/collapse.js: {}
+    node_modules/bootstrap/js/dist/collapse.js: {}
 
 bootstrap_dropdown:
   js:
     node_modules/bootstrap/js/dist/dropdown.js: {}
 
 
-popper:
-  version: 1.x
-  js:
-    node_modules/popper.js/dist/popper.js: {}
+
 
 
   dependencies:
