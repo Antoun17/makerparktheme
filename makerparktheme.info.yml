@@ -14,5 +14,4 @@ regions:
 
 libraries:
   - makerparktheme/bootstrap
-  - makerparktheme/bootstrap_dropdown
   - makerparktheme/popper
