@@ -9,15 +9,6 @@ bootstrap:
   css:
     theme:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
-  js:
-    node_modules/bootstrap/js/dist/collapse.js: {}
-
-bootstrap_dropdown:
-  js:
-    node_modules/bootstrap/js/dist/dropdown.js: {}
-
-
-
 
 
   dependencies:
