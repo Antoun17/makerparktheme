@@ -1,0 +1,17 @@
+{
+  "name": "makerparktheme",
+  "version": "1.0.0",
+  "description": "Theme for Drupal 8 Maker Park Radio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "rocketchat": "^0.57.3-alpha"
+  }
+}

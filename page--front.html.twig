@@ -1,0 +1,38 @@
+{{ attach_library('makerparktheme/bootstrap') }}
+{{attach_library('makerparktheme/popper')}}
+
+
+  <main role="main">
+
+    <div class="main-navigation">
+
+      {{page.main_navigation}}
+      {{ page.header }}
+
+    </div>
+
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+
+      {{ page.content }}
+
+    </div>{# /.layout-content #}
+
+
+    {% if page.sidebar %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

@@ -1,0 +1,18 @@
+name: Maker Park Theme
+description: Maker Park Radio Theme
+screenshot: images/makerpark.png
+type: theme
+core: 8.x
+libraries:
+
+
+regions:
+  content: 'Main Content'
+  footer: 'Footer'
+  sidebar: 'Sidebar'
+  header: 'Header'
+
+libraries:
+  - makerparktheme/bootstrap
+  - makerparktheme/popper
+  - makerparktheme/rocketchat
