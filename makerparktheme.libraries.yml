@@ -15,7 +15,7 @@ bootstrap_dropdown:
 popper:
   version: 1.x
   js:
-    js/popper.js: {}
+    node_modules/popper.js/dist/popper.js: {}
 
 
   dependencies:
