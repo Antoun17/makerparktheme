@@ -13,4 +13,4 @@ regions:
   header: 'Header'
 
 libraries:
-  - 'makerparktheme/node_modules/bootstrap'
+  - makerparktheme/bootstrap
