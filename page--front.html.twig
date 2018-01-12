@@ -3,10 +3,30 @@
 
 
   <main role="main">
+<<<<<<< HEAD
       {{ page.header }}
       {{page.main_navigation}}
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       {{ page.content }}
+=======
+
+    <div class="main-navigation">
+
+      {{page.main_navigation}}
+      {{ page.header }}
+
+    </div>
+
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+
+      {{ page.content }}
+
+    </div>{# /.layout-content #}
+
+
+>>>>>>> cd3f38665cd211fbcfb81b29d0febf9cfa88b94c
     {% if page.sidebar %}
       <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar }}
@@ -21,3 +41,8 @@
       {{ page.footer }}
     </footer>
   {% endif %}
+<<<<<<< HEAD
+=======
+
+</div>{# /.layout-container #}
+>>>>>>> cd3f38665cd211fbcfb81b29d0febf9cfa88b94c
