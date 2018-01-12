@@ -16,6 +16,16 @@ bootstrap:
   js:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}
 
+moment:
+  js:
+    node_modules/moment/moment.js: {}
+
+fullcalander:
+  css:
+    node_modules/fullcalander/fullcalander.css: {}
+  js:
+    node_modules/fullcalander/dist/fullcalander.js: {}
+
 
   dependencies:
     - core/jquery
