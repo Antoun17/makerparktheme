@@ -4,10 +4,12 @@ bootstrap:
   css:
     theme:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
-
-bootstrap:
   js:
-    bootstrap/js/dist/dropdown.js: {}
+    node_modules/bootstrap/dist/js/collapse.js: {}
+
+bootstrap_dropdown:
+  js:
+    node_modules/bootstrap/js/dist/dropdown.js: {}
 
 
 popper:
