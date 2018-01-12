@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.3",
+    "fullcalendar": "^3.8.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9",
     "rocketchat": "^0.57.3-alpha"
