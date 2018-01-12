@@ -8,8 +8,8 @@ libraries:
 
 regions:
   content: 'Main Content'
-  footer: 'Footer'
-  sidebar: 'Sidebar'
+  #footer: 'Footer'
+  #sidebar: 'Sidebar'
   header: 'Header'
 
 libraries:
