@@ -2,7 +2,7 @@
 popper:
   version: 1.x
   js:
-    node_modules/popperjs/dist/umd/popper.js: {}
+    node_modules/popper.js/dist/umd/popper.js: {}
 
 bootstrap:
   version: 4.0.x
