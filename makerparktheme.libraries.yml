@@ -1,20 +1,12 @@
-#global-css:
-#  css:
-#    theme:
-#      css/style.css: {}
-
-#global-js:
-#  js:
-#    js/main.js: {}
 
 bootstrap:
-  css:
-    theme:
+  version: 4.0.x
+    css:
+      theme:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
 
-bootstrap:
-  js:
-    bootstrap/js/dist/dropdown.js: {}
+js:
+  bootstrap/js/dist/dropdown.js: {}
 
 
 popper:
