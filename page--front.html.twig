@@ -4,21 +4,22 @@
 <header role="banner">
 {{ page.header }}
 
-<div class="main-navigation">
-
-  {{page.main_navigation}}
-
-</div>
-
 </header>
 
   <main role="main">
+
+    <div class="main-navigation">
+
+      {{page.main_navigation}}
+
+    </div>
+
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
 
       {{ page.content }}
-      
+
     </div>{# /.layout-content #}
 
 
