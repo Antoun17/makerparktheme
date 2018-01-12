@@ -3,20 +3,10 @@
 
 
   <main role="main">
-
       {{ page.header }}
       {{page.main_navigation}}
-
-
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-
-
       {{ page.content }}
-
-
-
-
     {% if page.sidebar %}
       <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar }}
@@ -31,5 +21,3 @@
       {{ page.footer }}
     </footer>
   {% endif %}
-
-</div>{# /.layout-container #}
