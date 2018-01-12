@@ -3,10 +3,11 @@ bootstrap:
   version: 4.0.x
     css:
       theme:
-        "node_modules/bootstrap/dist/css/bootstrap.css" {}
+        node_modules/bootstrap/dist/css/bootstrap.css: {}
 
-js:
-  bootstrap/js/dist/dropdown.js: {}
+bootstrap:
+  js:
+    bootstrap/js/dist/dropdown.js: {}
 
 
 popper:
