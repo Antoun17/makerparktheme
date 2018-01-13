@@ -2,10 +2,6 @@ rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
     
-php:
-  php:
-    php/test.php: {}
-
 popper:
   version: 1.x
   js:
