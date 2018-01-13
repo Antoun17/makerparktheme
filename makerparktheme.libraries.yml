@@ -1,7 +1,7 @@
 rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
-    
+
 popper:
   version: 1.x
   js:
