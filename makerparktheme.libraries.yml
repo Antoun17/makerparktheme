@@ -25,6 +25,9 @@ fullcalendar:
   js:
     node_modules/fullcalendar/dist/fullcalendar.js: {}
 
+photo:
+  photo:
+    images/makerpark.png: {}
 
   dependencies:
     - core/jquery
