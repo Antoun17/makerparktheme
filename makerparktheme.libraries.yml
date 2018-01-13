@@ -26,7 +26,7 @@ fullcalendar:
     node_modules/fullcalendar/dist/fullcalendar.js: {}
 
 photo:
-  asset:
+  css:
     images/makerpark.png: {}
 
   dependencies:
