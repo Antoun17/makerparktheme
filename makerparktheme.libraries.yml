@@ -2,6 +2,9 @@ rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
 
+calendar:
+  js:
+    js/simple-google-calendar.user.js: {}
 
 popper:
   version: 1.x
@@ -15,6 +18,7 @@ bootstrap:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
   js:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+
 
 
   dependencies:
