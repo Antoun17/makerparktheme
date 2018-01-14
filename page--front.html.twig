@@ -16,11 +16,7 @@
   <div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="true" class="embed-responsive-item" src="https://livestream.com/accounts/25937168/events/7713617/player?enableInfoAndActivity=true&amp;defaultDrawer=&amp;autoPlay=true&amp;mute=false"></iframe></div>
 
 
-    {% if page.footer %}
-      <footer role="contentinfo">
-        {{ page.footer }}
-      </footer>
-    {% endif %}
+
 
 <div class="gcalendar embed-responsive embed-responsive-16by9">
 
@@ -47,7 +43,11 @@
 </style>
 </div>
 
-
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}
 
 
 
