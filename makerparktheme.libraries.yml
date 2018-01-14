@@ -2,6 +2,7 @@ rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
 
+
 popper:
   version: 1.x
   js:
@@ -15,19 +16,6 @@ bootstrap:
   js:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}
 
-moment:
-  js:
-    node_modules/moment/moment.js: {}
-
-fullcalendar:
-  css:
-    node_modules/fullcalendar/fullcalendar.css: {}
-  js:
-    node_modules/fullcalendar/dist/fullcalendar.js: {}
-
-photo:
-  css:
-    images/makerpark.png: {}
 
   dependencies:
     - core/jquery
