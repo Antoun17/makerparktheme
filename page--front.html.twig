@@ -22,10 +22,20 @@
 
 {{attach_library('makerparktheme/gcalendar')}}
 
+<h1>Calendar</h1>
+
   <iframe src="https://calendar.google.com/calendar/embed?src=antounsawires%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="600" height="650" frameborder="10" scrolling="no"></iframe>
 
 
   <style class="stylish" type="text/css">
+
+  .h1 {
+    -webkit-filter: invert(90%) hue-rotate(180deg);
+  	filter: invert(90%) hue-rotate(180deg);
+  	background: rgb(25, 25, 25);
+
+
+  }
 
   .gcalendar {
 	-webkit-filter: invert(90%) hue-rotate(180deg);
@@ -48,8 +58,6 @@
     {{ page.footer }}
   </footer>
 {% endif %}
-
-
 
   </div>
 
