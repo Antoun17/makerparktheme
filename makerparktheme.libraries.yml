@@ -2,7 +2,7 @@ rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
 
-calendar:
+gcalendar:
   js:
     js/simple-google-calendar.user.js: {}
 
