@@ -15,5 +15,8 @@
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9",
     "rocketchat": "^0.57.3-alpha"
+  },
+  "devDependencies": {
+    "video.js": "^6.6.0"
   }
 }
