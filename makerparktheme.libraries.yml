@@ -22,11 +22,12 @@ bootstrap:
 videojs:
   js:
     node_modules/video.js/dist/video.js: {}
-    
+    node_modules/video.js/dist/video.min.js: {}
+
 videocss:
   css:
     node_modules/video.js/dist/video-js.css: {}
-
-
+    node_modules/video.js/dist/video-js.min.css: {}
+    
   dependencies:
     - core/jquery
