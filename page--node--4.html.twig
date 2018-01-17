@@ -1,5 +1,6 @@
 {{ attach_library('makerparktheme/bootstrap') }}
 {{attach_library('makerparktheme/popper')}}
+{{attach_library('makerparktheme/videojs')}}
 
 <header role="banner">
 {{ page.header }}
@@ -14,6 +15,36 @@
 </div>
 
 </header>
+
+<head>
+
+</head>
+
+<body>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <source src="https://s3.us-east-2.amazonaws.com/makerparkradio/162541560.mp4" type='video/mp4'>
+    <source src="MY_VIDEO.webm" type='video/webm'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+  <script src="http://vjs.zencdn.net/6.6.0/video.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
   <center> <h1>About</h1> </center>
