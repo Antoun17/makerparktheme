@@ -19,7 +19,11 @@ bootstrap:
   js:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}
 
-
+videojs:
+  js:
+    node_modules/video.js/dist/video.js: {}
+  css:
+    node_modules/video.js/dist/video-js.css: {}
 
   dependencies:
     - core/jquery
