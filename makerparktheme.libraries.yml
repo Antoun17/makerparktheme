@@ -20,10 +20,12 @@ bootstrap:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}
 
 videojs:
-  css:
-    node_modules/video.js/dist/video-js.css: {}
   js:
     node_modules/video.js/dist/video.js: {}
+    
+videocss:
+  css:
+    node_modules/video.js/dist/video-js.css: {}
 
 
   dependencies:
