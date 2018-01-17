@@ -1,6 +1,7 @@
 {{attach_library('makerparktheme/bootstrap') }}
 {{attach_library('makerparktheme/popper')}}
-{{attach_library('makerparktheme/videojs')}}
+{{attach_library('makerparktheme/html5player')}}
+
 
 
 <header role="banner">
@@ -24,16 +25,22 @@
 
 
 
-        <div class="video-container" style="width:400px; height:200px;  display: block;">
-          <video class="video-js vjs-default-skin" controls data-setup='{"fluid": true}' width="400" height="200">
-            <p>
-              Your browser doesn't support video. Please <a href="http://browsehappy.com/">upgrade your browser</a> to see the example.
-            </p>
-            <source src="https://s3.amazonaws.com/Donna/video/big-buck-bunny_trailer.webm" type='video/webm' />
-          </video>
+  <div class="px-video-container" id="myvid">
+<div class="px-video-img-captions-container">
+    <div class="px-video-captions hide" aria-hidden="true"></div>
+    <video width="640" height="360" poster="media/foo.jpg" controls>
+        <source src="foo.mp4" type="video/mp4" />
+        <source src="foo.webm" type="video/webm" />
+        <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />
+        <div>
+            <a href="foo.mp4">
+                <img src="media/foo.jpg" width="640" height="360" alt="download video" />
+            </a>
         </div>
-
-
+    </video>
+</div>
+<div class="px-video-controls"></div>
+</div>
 
   <p>Maker Park Radio is dedicated to providing free music and live arts programming by broadcasting selected two hour shows via our website with video streaming and audio Mixcloud playback. It’s programming is diverse and inclusive of the many genres, communities and cultures surrounding it in Staten Island and beyond. It will broadcast 24 hours a day from Staten Island Makerspace and will maintain it’s commitment to the arts and community building through it’s broadcasts and participation in arts related community events when possible.
 

@@ -1,10 +1,10 @@
+html5player:
+  js:
+    node_modules/html5player/css/px-vide.css: {}
+    
 rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
-
-gcalendar:
-  js:
-    js/simple-google-calendar.user.js: {}
 
 popper:
   version: 1.x
@@ -18,15 +18,6 @@ bootstrap:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
   js:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}
-
-videojs:
-  css:
-    node_modules/video.js/dist/video-js.css: {}
-    node_modules/video.js/dist/video-js.min.css: {}
-  js:
-    node_modules/video.js/dist/video.js: {}
-    node_modules/video.js/dist/video.min.js: {}
-    node_modules/videojs-vtt.js/dist/vtt.js: {}
 
 
   dependencies:
