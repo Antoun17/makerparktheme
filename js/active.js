@@ -1,3 +1,20 @@
-$( document ).on( 'click', '.nav-list li', function ( e ) {
-    $( this ).addClass( 'active' ).siblings().removeClass( 'active' );
-} );
+var navlnks = document.querySelectorAll(".nav a");
+       Array.prototype.map.call(navlnks, function(item) {
+
+           item.addEventListener("click", function(e) {
+
+               var navlnks = document.querySelectorAll(".nav a");
+
+               Array.prototype.map.call(navlnks, function(item) {
+
+                   if (item.parentNode.className == "active" || item.parentNode.className == "active open" ) {
+
+                       item.parentNode.className = "";
+
+                   }
+
+               });
+
+               e.currentTarget.parentNode.className = "active";
+           });
+       });
