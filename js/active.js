@@ -1,6 +1,3 @@
-var selector = '.nav li';
-
-$(selector).on('click', function(){
-    $(selector).removeClass('active');
-    $(this).addClass('active');
-});
+$( document ).on( 'click', '.nav-list li', function ( e ) {
+    $( this ).addClass( 'active' ).siblings().removeClass( 'active' );
+} );
