@@ -19,8 +19,8 @@ bootstrap:
   js:
     node_modules/bootstrap/dist/js/bootstrap.js: {}
 
+
 active:
-  version: 1.x
   js:
     js/active.js: {}
 
