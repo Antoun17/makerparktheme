@@ -28,32 +28,8 @@
 <h1>Calendar</h1>
 </center>
 
-<div class="gcalendar embed-responsive embed-responsive-4by3">
-
-{{attach_library('makerparktheme/gcalendar')}}
-
-  <iframe src="https://calendar.google.com/calendar/embed?src=antounsawires%40gmail.com&ctz=America%2FNew_York" style="border: 20px "width="600" height="650" frameborder="10" scrolling="no"></iframe>
-
-
-  <style class="stylish" type="text/css">
-
-
-
-  .gcalendar {
-	-webkit-filter: invert(0%) hue-rotate(180deg);
-	filter: invert(60%) hue-rotate(180deg);
-	background-color: #333333;
-
-  #onegoogbar a[href^="https://accounts.google.com"],
-  #onegoogbar a[href="javascript:_SR_backToCalendar();"],
-  #gb a[href^="https://accounts.google.com"],
-
-	-webkit-filter: invert(100%) hue-rotate(180deg);
-	filter: invert(100%) hue-rotate(180deg);
-  }
-
-</style>
-</div>
+<div data-tockify-component="calendar" data-tockify-calendar="antoun"></div>
+<script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
 
 {% if page.footer %}
   <footer role="contentinfo">
