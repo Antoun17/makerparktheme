@@ -1,5 +1,5 @@
-var navlnks = document.querySelectorAll(".nav-link a");
-       Array.prototype.map.call(navlnks, function(item) {
+var navlnksuno = document.querySelectorAll(".nav-link a");
+       Array.prototype.map.call(navlnksuno, function(item) {
 
            item.addEventListener("click", function(e) {
 
