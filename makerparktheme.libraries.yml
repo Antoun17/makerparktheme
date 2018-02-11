@@ -1,3 +1,7 @@
+jquery:
+  js:
+    core/jquery: {}
+
 bootstrap:
   version: 4.0.x
   css:
