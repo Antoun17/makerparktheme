@@ -6,7 +6,7 @@ fullcalendar:
 
 moment:
   js:
-    node_modules/moment.js: {}
+    node_modules/moment/moment.js: {}
 
 html5player:
   js:
