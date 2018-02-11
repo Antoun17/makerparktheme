@@ -1,8 +1,9 @@
 fullcalendar:
-  js:
-    node_modules/fullcalendar/dist/fullcalendar.js: {}
   css:
     node_modules/fullcalendar/dist/fullcalendar.css: {}
+  js:
+    node_modules/fullcalendar/dist/fullcalendar.js: {}
+
 
 moment:
   js:
