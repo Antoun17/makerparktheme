@@ -16,7 +16,6 @@ libraries:
   - makerparktheme/bootstrap
   - makerparktheme/popper
   - makerparktheme/rocketchat
-  - makerparktheme/html5player
   - makerparktheme/active
   - makerparktheme/fullcalendar
   - makerparktheme/moment
