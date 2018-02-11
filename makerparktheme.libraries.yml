@@ -8,10 +8,6 @@ moment:
   js:
     node_modules/moment/moment.js: {}
 
-html5player:
-  js:
-    node_modules/html5player/css/px-video.css: {}
-
 rocketchat:
   js:
     node_modules/rocketchat/lib/rocket-livechat.js: {}
