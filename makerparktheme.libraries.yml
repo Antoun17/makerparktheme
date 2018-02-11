@@ -4,6 +4,10 @@ fullcalendar:
   css:
     node_modules/fullcalendar/dist/fullcalendar.css: {}
 
+moment:
+  js:
+    node_modules/moment.js: {}
+
 html5player:
   js:
     node_modules/html5player/css/px-video.css: {}
