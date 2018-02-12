@@ -16,3 +16,4 @@ libraries:
   - makerparktheme/bootstrap
   - makerparktheme/moment
   - makerparktheme/popper
+  - makerparktheme/cards
