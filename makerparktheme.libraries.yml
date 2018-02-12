@@ -6,14 +6,14 @@ bootstrap:
   js:
     node_modules/bootstrap/dist/js/bootstrap.js: {}
   dependencies:
-    - core/jquery
+    - core/jQuery
 
 
 moment:
   js:
     node_modules/moment/moment.js: {}
   dependencies:
-    - core/jquery
+    - core/jQuery
 
 
 fullcalendar:
@@ -22,10 +22,7 @@ fullcalendar:
   js:
     node_modules/fullcalendar/dist/fullcalendar.js: {}
   dependencies:
-    - core/jquery
-    - core/jquery.once
-
-
+    - core/jQuery
 
 rocketchat:
   js:
