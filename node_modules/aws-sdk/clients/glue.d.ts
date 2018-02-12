@@ -44,6 +44,14 @@ declare class Glue extends Service {
    */
   batchDeleteTable(callback?: (err: AWSError, data: Glue.Types.BatchDeleteTableResponse) => void): Request<Glue.Types.BatchDeleteTableResponse, AWSError>;
   /**
+   * Deletes a specified batch of versions of a table.
+   */
+  batchDeleteTableVersion(params: Glue.Types.BatchDeleteTableVersionRequest, callback?: (err: AWSError, data: Glue.Types.BatchDeleteTableVersionResponse) => void): Request<Glue.Types.BatchDeleteTableVersionResponse, AWSError>;
+  /**
+   * Deletes a specified batch of versions of a table.
+   */
+  batchDeleteTableVersion(callback?: (err: AWSError, data: Glue.Types.BatchDeleteTableVersionResponse) => void): Request<Glue.Types.BatchDeleteTableVersionResponse, AWSError>;
+  /**
    * Retrieves partitions in a batch request.
    */
   batchGetPartition(params: Glue.Types.BatchGetPartitionRequest, callback?: (err: AWSError, data: Glue.Types.BatchGetPartitionResponse) => void): Request<Glue.Types.BatchGetPartitionResponse, AWSError>;
@@ -60,11 +68,11 @@ declare class Glue extends Service {
    */
   batchStopJobRun(callback?: (err: AWSError, data: Glue.Types.BatchStopJobRunResponse) => void): Request<Glue.Types.BatchStopJobRunResponse, AWSError>;
   /**
-   * Creates a classifier in the user's account. This may be either a GrokClassifier or an XMLClassifier. 
+   * Creates a classifier in the user's account. This may be a GrokClassifier, an XMLClassifier, or abbrev JsonClassifier, depending on which field of the request is present.
    */
   createClassifier(params: Glue.Types.CreateClassifierRequest, callback?: (err: AWSError, data: Glue.Types.CreateClassifierResponse) => void): Request<Glue.Types.CreateClassifierResponse, AWSError>;
   /**
-   * Creates a classifier in the user's account. This may be either a GrokClassifier or an XMLClassifier. 
+   * Creates a classifier in the user's account. This may be a GrokClassifier, an XMLClassifier, or abbrev JsonClassifier, depending on which field of the request is present.
    */
   createClassifier(callback?: (err: AWSError, data: Glue.Types.CreateClassifierResponse) => void): Request<Glue.Types.CreateClassifierResponse, AWSError>;
   /**
@@ -211,6 +219,14 @@ declare class Glue extends Service {
    * Removes a table definition from the Data Catalog.
    */
   deleteTable(callback?: (err: AWSError, data: Glue.Types.DeleteTableResponse) => void): Request<Glue.Types.DeleteTableResponse, AWSError>;
+  /**
+   * Deletes a specified version of a table.
+   */
+  deleteTableVersion(params: Glue.Types.DeleteTableVersionRequest, callback?: (err: AWSError, data: Glue.Types.DeleteTableVersionResponse) => void): Request<Glue.Types.DeleteTableVersionResponse, AWSError>;
+  /**
+   * Deletes a specified version of a table.
+   */
+  deleteTableVersion(callback?: (err: AWSError, data: Glue.Types.DeleteTableVersionResponse) => void): Request<Glue.Types.DeleteTableVersionResponse, AWSError>;
   /**
    * Deletes a specified trigger. If the trigger is not found, no exception is thrown.
    */
@@ -404,6 +420,14 @@ declare class Glue extends Service {
    */
   getTable(callback?: (err: AWSError, data: Glue.Types.GetTableResponse) => void): Request<Glue.Types.GetTableResponse, AWSError>;
   /**
+   * Retrieves a specified version of a table.
+   */
+  getTableVersion(params: Glue.Types.GetTableVersionRequest, callback?: (err: AWSError, data: Glue.Types.GetTableVersionResponse) => void): Request<Glue.Types.GetTableVersionResponse, AWSError>;
+  /**
+   * Retrieves a specified version of a table.
+   */
+  getTableVersion(callback?: (err: AWSError, data: Glue.Types.GetTableVersionResponse) => void): Request<Glue.Types.GetTableVersionResponse, AWSError>;
+  /**
    * Retrieves a list of strings that identify available versions of a specified table.
    */
   getTableVersions(params: Glue.Types.GetTableVersionsRequest, callback?: (err: AWSError, data: Glue.Types.GetTableVersionsResponse) => void): Request<Glue.Types.GetTableVersionsResponse, AWSError>;
@@ -524,11 +548,11 @@ declare class Glue extends Service {
    */
   stopTrigger(callback?: (err: AWSError, data: Glue.Types.StopTriggerResponse) => void): Request<Glue.Types.StopTriggerResponse, AWSError>;
   /**
-   * Modifies an existing classifier (either a GrokClassifier or an XMLClassifier).
+   * Modifies an existing classifier (a GrokClassifier, XMLClassifier, or JsonClassifier, depending on which field is present).
    */
   updateClassifier(params: Glue.Types.UpdateClassifierRequest, callback?: (err: AWSError, data: Glue.Types.UpdateClassifierResponse) => void): Request<Glue.Types.UpdateClassifierResponse, AWSError>;
   /**
-   * Modifies an existing classifier (either a GrokClassifier or an XMLClassifier).
+   * Modifies an existing classifier (a GrokClassifier, XMLClassifier, or JsonClassifier, depending on which field is present).
    */
   updateClassifier(callback?: (err: AWSError, data: Glue.Types.UpdateClassifierResponse) => void): Request<Glue.Types.UpdateClassifierResponse, AWSError>;
   /**
@@ -701,7 +725,7 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the catalog database where the tables to delete reside.
+     * The name of the catalog database where the tables to delete reside. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
@@ -714,6 +738,31 @@ declare namespace Glue {
      * A list of errors encountered in attempting to delete the specified tables.
      */
     Errors?: TableErrors;
+  }
+  export type BatchDeleteTableVersionList = VersionString[];
+  export interface BatchDeleteTableVersionRequest {
+    /**
+     * The ID of the Data Catalog where the tables reside. If none is supplied, the AWS account ID is used by default.
+     */
+    CatalogId?: CatalogIdString;
+    /**
+     * The database in the catalog in which the table resides. For Hive compatibility, this name is entirely lowercase.
+     */
+    DatabaseName: NameString;
+    /**
+     * The name of the table. For Hive compatibility, this name is entirely lowercase.
+     */
+    TableName: NameString;
+    /**
+     * A list of the IDs of versions to be deleted.
+     */
+    VersionIds: BatchDeleteTableVersionList;
+  }
+  export interface BatchDeleteTableVersionResponse {
+    /**
+     * A list of errors encountered while trying to delete the specified table versions.
+     */
+    Errors?: TableVersionErrors;
   }
   export interface BatchGetPartitionRequest {
     /**
@@ -792,6 +841,7 @@ declare namespace Glue {
   }
   export type BatchStopJobRunSuccessfulSubmissionList = BatchStopJobRunSuccessfulSubmission[];
   export type Boolean = boolean;
+  export type BooleanNullable = boolean;
   export type BooleanValue = boolean;
   export type BoundedPartitionValueList = ValueString[];
   export type CatalogEntries = CatalogEntry[];
@@ -830,6 +880,10 @@ declare namespace Glue {
      * An XMLClassifier object.
      */
     XMLClassifier?: XMLClassifier;
+    /**
+     * A JsonClassifier object.
+     */
+    JsonClassifier?: JsonClassifier;
   }
   export type ClassifierList = Classifier[];
   export type ClassifierNameList = NameString[];
@@ -960,7 +1014,7 @@ declare namespace Glue {
     /**
      * The name of the connection.
      */
-    Name?: NameString;
+    Name: NameString;
     /**
      * Description of the connection.
      */
@@ -968,7 +1022,7 @@ declare namespace Glue {
     /**
      * The type of the connection. Currently, only JDBC is supported; SFTP is not supported.
      */
-    ConnectionType?: ConnectionType;
+    ConnectionType: ConnectionType;
     /**
      * A list of criteria that can be used in selecting this connection.
      */
@@ -976,7 +1030,7 @@ declare namespace Glue {
     /**
      * A list of key-value pairs used as parameters for this connection.
      */
-    ConnectionProperties?: ConnectionProperties;
+    ConnectionProperties: ConnectionProperties;
     /**
      * A map of physical connection requirements, such as VPC and SecurityGroup, needed for making this connection successfully.
      */
@@ -1117,6 +1171,10 @@ declare namespace Glue {
      * An XMLClassifier object specifying the classifier to create.
      */
     XMLClassifier?: CreateXMLClassifierRequest;
+    /**
+     * A JsonClassifier object specifying the classifier to create.
+     */
+    JsonClassifier?: CreateJsonClassifierRequest;
   }
   export interface CreateClassifierResponse {
   }
@@ -1346,6 +1404,16 @@ declare namespace Glue {
      */
     Name?: NameString;
   }
+  export interface CreateJsonClassifierRequest {
+    /**
+     * The name of the classifier.
+     */
+    Name: NameString;
+    /**
+     * A JsonPath string defining the JSON data for the classifier to classify. AWS Glue supports a subset of JsonPath, as described in Writing JsonPath Custom Classifiers.
+     */
+    JsonPath: JsonPath;
+  }
   export interface CreatePartitionRequest {
     /**
      * The ID of the catalog in which the partion is to be created. Currently, this should be the AWS account ID.
@@ -1396,7 +1464,7 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The catalog database in which to create the new table.
+     * The catalog database in which to create the new table. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
@@ -1474,7 +1542,7 @@ declare namespace Glue {
   export type DagNodes = CodeGenNode[];
   export interface Database {
     /**
-     * Name of the database.
+     * Name of the database. For Hive compatibility, this is folded to lowercase when it is stored.
      */
     Name: NameString;
     /**
@@ -1496,7 +1564,7 @@ declare namespace Glue {
   }
   export interface DatabaseInput {
     /**
-     * Name of the database.
+     * Name of the database. For Hive compatibility, this is folded to lowercase when it is stored.
      */
     Name: NameString;
     /**
@@ -1550,7 +1618,7 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the Database to delete.
+     * The name of the Database to delete. For Hive compatibility, this must be all lowercase.
      */
     Name: NameString;
   }
@@ -1602,15 +1670,35 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the catalog database in which the table resides.
+     * The name of the catalog database in which the table resides. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
-     * The name of the table to be deleted.
+     * The name of the table to be deleted. For Hive compatibility, this name is entirely lowercase.
      */
     Name: NameString;
   }
   export interface DeleteTableResponse {
+  }
+  export interface DeleteTableVersionRequest {
+    /**
+     * The ID of the Data Catalog where the tables reside. If none is supplied, the AWS account ID is used by default.
+     */
+    CatalogId?: CatalogIdString;
+    /**
+     * The database in the catalog in which the table resides. For Hive compatibility, this name is entirely lowercase.
+     */
+    DatabaseName: NameString;
+    /**
+     * The name of the table. For Hive compatibility, this name is entirely lowercase.
+     */
+    TableName: NameString;
+    /**
+     * The ID of the table version to be deleted.
+     */
+    VersionId: VersionString;
+  }
+  export interface DeleteTableVersionResponse {
   }
   export interface DeleteTriggerRequest {
     /**
@@ -1910,7 +1998,7 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the database to retrieve.
+     * The name of the database to retrieve. For Hive compatibility, this should be all lowercase.
      */
     Name: NameString;
   }
@@ -2190,11 +2278,11 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the database in the catalog in which the table resides.
+     * The name of the database in the catalog in which the table resides. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
-     * The name of the table for which to retrieve the definition.
+     * The name of the table for which to retrieve the definition. For Hive compatibility, this name is entirely lowercase.
      */
     Name: NameString;
   }
@@ -2204,6 +2292,30 @@ declare namespace Glue {
      */
     Table?: Table;
   }
+  export interface GetTableVersionRequest {
+    /**
+     * The ID of the Data Catalog where the tables reside. If none is supplied, the AWS account ID is used by default.
+     */
+    CatalogId?: CatalogIdString;
+    /**
+     * The database in the catalog in which the table resides. For Hive compatibility, this name is entirely lowercase.
+     */
+    DatabaseName: NameString;
+    /**
+     * The name of the table. For Hive compatibility, this name is entirely lowercase.
+     */
+    TableName: NameString;
+    /**
+     * The ID value of the table version to be retrieved.
+     */
+    VersionId?: VersionString;
+  }
+  export interface GetTableVersionResponse {
+    /**
+     * The requested table version.
+     */
+    TableVersion?: TableVersion;
+  }
   export type GetTableVersionsList = TableVersion[];
   export interface GetTableVersionsRequest {
     /**
@@ -2211,11 +2323,11 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The database in the catalog in which the table resides.
+     * The database in the catalog in which the table resides. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
-     * The name of the table.
+     * The name of the table. For Hive compatibility, this name is entirely lowercase.
      */
     TableName: NameString;
     /**
@@ -2243,7 +2355,7 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The database in the catalog whose tables to list.
+     * The database in the catalog whose tables to list. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
@@ -2593,6 +2705,29 @@ declare namespace Glue {
      */
     AllocatedCapacity?: IntegerValue;
   }
+  export interface JsonClassifier {
+    /**
+     * The name of the classifier.
+     */
+    Name: NameString;
+    /**
+     * The time this classifier was registered.
+     */
+    CreationTime?: Timestamp;
+    /**
+     * The time this classifier was last updated.
+     */
+    LastUpdated?: Timestamp;
+    /**
+     * The version of this classifier.
+     */
+    Version?: VersionId;
+    /**
+     * A JsonPath string defining the JSON data for the classifier to classify. AWS Glue supports a subset of JsonPath, as described in Writing JsonPath Custom Classifiers.
+     */
+    JsonPath: JsonPath;
+  }
+  export type JsonPath = string;
   export type JsonValue = string;
   export type KeyString = string;
   export type Language = "PYTHON"|"SCALA"|string;
@@ -2777,7 +2912,7 @@ declare namespace Glue {
      */
     SecurityGroupIdList?: SecurityGroupIdList;
     /**
-     * The connection's availability zone.
+     * The connection's availability zone. This field is deprecated and has no effect.
      */
     AvailabilityZone?: NameString;
   }
@@ -3040,11 +3175,11 @@ declare namespace Glue {
   export type StringList = GenericString[];
   export interface Table {
     /**
-     * Name of the table.
+     * Name of the table. For Hive compatibility, this must be entirely lowercase.
      */
     Name: NameString;
     /**
-     * Name of the metadata database where the table metadata resides.
+     * Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      */
     DatabaseName?: NameString;
     /**
@@ -3106,7 +3241,7 @@ declare namespace Glue {
   }
   export interface TableError {
     /**
-     * Name of the table.
+     * Name of the table. For Hive compatibility, this must be entirely lowercase.
      */
     TableName?: NameString;
     /**
@@ -3117,7 +3252,7 @@ declare namespace Glue {
   export type TableErrors = TableError[];
   export interface TableInput {
     /**
-     * Name of the table.
+     * Name of the table. For Hive compatibility, this is folded to lowercase when it is stored.
      */
     Name: NameString;
     /**
@@ -3179,6 +3314,21 @@ declare namespace Glue {
      */
     VersionId?: VersionString;
   }
+  export interface TableVersionError {
+    /**
+     * The name of the table in question.
+     */
+    TableName?: NameString;
+    /**
+     * The ID value of the version in question.
+     */
+    VersionId?: VersionString;
+    /**
+     * Detail about the error.
+     */
+    ErrorDetail?: ErrorDetail;
+  }
+  export type TableVersionErrors = TableVersionError[];
   export type Timestamp = Date;
   export type TimestampValue = Date;
   export type Token = string;
@@ -3253,6 +3403,10 @@ declare namespace Glue {
      * An XMLClassifier object with updated fields.
      */
     XMLClassifier?: UpdateXMLClassifierRequest;
+    /**
+     * A JsonClassifier object with updated fields.
+     */
+    JsonClassifier?: UpdateJsonClassifierRequest;
   }
   export interface UpdateClassifierResponse {
   }
@@ -3310,7 +3464,7 @@ declare namespace Glue {
      */
     SchemaChangePolicy?: SchemaChangePolicy;
     /**
-     * Crawler configuration information. This versioned JSON string allows users to specify aspects of a Crawler's behavior. You can use this field to force partitions to inherit metadata such as classification, input format, output format, serde information, and schema from their parent table, rather than detect this information separately for each partition. Use the following JSON string to specify that behavior: Example:  '{ "Version": 1.0, "CrawlerOutput": { "Partitions": { "AddOrUpdateBehavior": "InheritFromTable" } } }' 
+     * Crawler configuration information. This versioned JSON string allows users to specify aspects of a Crawler's behavior. You can use this field to force partitions to inherit metadata such as classification, input format, output format, serde information, and schema from their parent table, rather than detect this information separately for each partition. Use the following JSON string to specify that behavior: Example: '{ "Version": 1.0, "CrawlerOutput": { "Partitions": { "AddOrUpdateBehavior": "InheritFromTable" } } }' 
      */
     Configuration?: CrawlerConfiguration;
   }
@@ -3334,7 +3488,7 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the metadata database to update in the catalog.
+     * The name of the database to update in the catalog. For Hive compatibility, this is folded to lowercase.
      */
     Name: NameString;
     /**
@@ -3398,6 +3552,16 @@ declare namespace Glue {
      */
     JobName?: NameString;
   }
+  export interface UpdateJsonClassifierRequest {
+    /**
+     * The name of the classifier.
+     */
+    Name: NameString;
+    /**
+     * A JsonPath string defining the JSON data for the classifier to classify. AWS Glue supports a subset of JsonPath, as described in Writing JsonPath Custom Classifiers.
+     */
+    JsonPath?: JsonPath;
+  }
   export interface UpdatePartitionRequest {
     /**
      * The ID of the Data Catalog where the partition to be updated resides. If none is supplied, the AWS account ID is used by default.
@@ -3428,13 +3592,17 @@ declare namespace Glue {
      */
     CatalogId?: CatalogIdString;
     /**
-     * The name of the catalog database in which the table resides.
+     * The name of the catalog database in which the table resides. For Hive compatibility, this name is entirely lowercase.
      */
     DatabaseName: NameString;
     /**
      * An updated TableInput object to define the metadata table in the catalog.
      */
     TableInput: TableInput;
+    /**
+     * By default, UpdateTable always creates an archived version of the table before updating it. If skipArchive is set to true, however, UpdateTable does not create the archived version.
+     */
+    SkipArchive?: BooleanNullable;
   }
   export interface UpdateTableResponse {
   }

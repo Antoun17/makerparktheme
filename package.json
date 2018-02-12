@@ -9,15 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.183.0",
-    "bootstrap": "^4.0.0-beta.3",
-    "fullcalendar": "^3.8.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.9",
+    "aws-sdk": "^2.192.0",
+    "bootstrap": "^4.0.0",
+    "fullcalendar": "^3.8.2",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.13.0",
     "pusher": "^1.5.1",
     "rocketchat": "^0.57.3-alpha"
   },
   "devDependencies": {
-    "video.js": "^6.6.0"
+    "video.js": "^6.7.1"
   }
 }
