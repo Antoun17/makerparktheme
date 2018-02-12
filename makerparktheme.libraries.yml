@@ -5,7 +5,8 @@ bootstrap:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
   js:
     node_modules/bootstrap/dist/js/bootstrap.js: {}
-
+  dependencies:
+    - core/jquery
 
 moment:
   js:
@@ -19,8 +20,5 @@ popper:
 active:
   js:
     js/active.js: {}
-
-
-mprcalendar:
-  js:
-    js/mprcalendar.js: {}
+  dependencies:
+    - core/jquery
