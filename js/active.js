@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-var header = document.getElementById("navbar");
+var header = document.getElementById("nav-item");
 var btns = header.getElementsByClassName("nav-link");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
