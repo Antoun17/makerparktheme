@@ -15,6 +15,9 @@ fullcalendar:
     node_modules/fullcalendar/dist/fullcalendar.css: {}
   js:
     node_modules/fullcalendar/dist/fullcalendar.js: {}
+  dependencies:
+    - core/jquery
+
 
 
 rocketchat:
