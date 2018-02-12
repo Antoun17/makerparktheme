@@ -5,10 +5,16 @@ bootstrap:
       node_modules/bootstrap/dist/css/bootstrap.css: {}
   js:
     node_modules/bootstrap/dist/js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+
 
 moment:
   js:
     node_modules/moment/moment.js: {}
+  dependencies:
+    - core/jquery
+
 
 fullcalendar:
   css:
