@@ -15,6 +15,11 @@ moment:
   dependencies:
     - core/jquery
 
+readmore:
+  js:
+    js/readmore.js: {}
+  dependencies:
+    - core/jquery
 
 fullcalendar:
   css:
