@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 var header = document.getElementById("navbar");
-var btns = header.getElementsByClassName("navlink");
+var btns = header.getElementsByClassName("nav-link");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
