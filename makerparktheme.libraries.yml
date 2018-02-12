@@ -41,3 +41,7 @@ popper:
 active:
   js:
     js/active.js: {}
+
+mprcalendar:
+  js:
+    js/mprcalendar: {}
