@@ -44,4 +44,4 @@ active:
 
 mprcalendar:
   js:
-    js/mprcalendar: {}
+    js/mprcalendar.js: {}
