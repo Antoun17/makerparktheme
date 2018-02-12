@@ -13,7 +13,6 @@ regions:
   header: 'Header'
 
 libraries:
-  - makerparktheme/jquery
   - makerparktheme/bootstrap
   - makerparktheme/moment
   - makerparktheme/fullcalendar
