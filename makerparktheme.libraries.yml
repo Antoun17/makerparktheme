@@ -1,6 +1,6 @@
 jquery:
   js:
-    core/jquery/dist/jquery.js: {}
+    node_modules/jquery/dist/jquery.js: {}
 
 bootstrap:
   version: 4.0.x
