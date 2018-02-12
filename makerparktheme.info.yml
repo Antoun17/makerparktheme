@@ -15,9 +15,5 @@ regions:
 libraries:
   - makerparktheme/bootstrap
   - makerparktheme/moment
-  - makerparktheme/fullcalendar
   - makerparktheme/popper
-  - makerparktheme/rocketchat
   - makerparktheme/active
-  - makerparktheme/readmore
-  - makerparktheme/mprcalendar
