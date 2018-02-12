@@ -20,6 +20,8 @@ popper:
 active:
   js:
     js/active.js: {}
+  dependencies:
+    - core/jquery
 
 mprcalendar:
   js:
