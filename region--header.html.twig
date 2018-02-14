@@ -22,11 +22,16 @@
                   <li class="nav-item">
                     <a class="nav-link text-white btn btn-warning " style="padding-top: 15px; padding-bottom: 15px; padding-right:10px; padding-left:10px; margin: 10px;"href="/node/5">Schedule</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white btn dropdown-toggle btn-warning" style="padding-top: 15px; padding-bottom: 15px; padding-right:10px; padding-left:10px; margin: 10px;" href="/node/17">Shows</a>
-                      <a  class="dropdown-toggle" href="#" >Talk Shows</a>
-                      <a  class="dropdown-toggle" href="#" >Music Shows</a>
-                  </li>
+                  <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Shows
+                  </a>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/node/17">Music Shows</a>
+                    <a class="dropdown-item" href="#">Talk Shows</a>
+                  </div>
+                </div>
                   <li class="nav-item">
                     <a class="nav-link text-white btn btn-warning" style="padding-top: 15px; padding-bottom: 15px; padding-right:10px; padding-left:10px; margin: 10px;" href="/node/15">Donate/Sponsor</a>
                   </li>
