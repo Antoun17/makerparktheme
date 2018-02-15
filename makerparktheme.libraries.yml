@@ -19,4 +19,5 @@ popper:
 
 cards:
   css:
+    theme:
     assets/cards.css: {}
