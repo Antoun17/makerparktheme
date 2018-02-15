@@ -18,6 +18,5 @@ popper:
     node_modules/popper.js/dist/umd/popper.js: {}
 
 cards:
-  js:
-    js/cards.js: {}
-    
+  css:
+    assets/cards.css: {}
