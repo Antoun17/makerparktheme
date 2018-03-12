@@ -6,12 +6,10 @@
       {{attach_library('makerparktheme/active')}}
 
 
+
   </head>
   <body>
     <header role="banner">
-
-    {{ helloworld }}
-
 
     {{ page.header }}
 
@@ -20,5 +18,9 @@
       {{page.main_navigation}}
 
     </div>
+
+    <body>
+      <dd>{{ drupal_block('helloworld') }}</dd>
+    </body>
 
     </header>
