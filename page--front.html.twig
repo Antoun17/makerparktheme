@@ -69,7 +69,21 @@
 
 <div class="gcalendar">
 
-  <div data-tockify-component="calendar" data-tockify-calendar="makerpark" data-tockify-height="1000px" data-tockify-width="100%"></div>
+<style media="screen">
+
+@media only screen and (max-device-width: 480px) {
+
+.calendar {
+height: 600px;
+width: 600px;
+}
+
+    }
+
+</style>
+
+
+  <div data-tockify-component="calendar" data-tockify-calendar="makerpark" data-tockify-width="100%"></div>
   <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
 
 </div>
