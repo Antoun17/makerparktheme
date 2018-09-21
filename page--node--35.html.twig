@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  {{attach_library('makerparktheme/bootstrap')}}
+  {{attach_library('makerparktheme/popper')}}
+  {{attach_library('makerparktheme/active')}}
+
+
+</head>
+<body>
+  <header role="banner">
+  {{ page.header }}
+
+  <div class="main-navigation">
+
+    {{page.main_navigation}}
+
+  </div>
+
+</header>
   <body>
 
     <h2>This is the donor page</h2>
